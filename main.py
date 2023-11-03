@@ -13,7 +13,7 @@ from langchain.chains import RetrievalQA
 
 loader = WebBaseLoader("https://medium.com/@lets.see.1016/connect-google-bard-with-python-using-palm-api-5f1460fa6f68")
 data = loader.load()
-
+ 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=100)
 all_splits = text_splitter.split_documents(data)
